@@ -1,0 +1,447 @@
+.msg, .screen, header .headerContent {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.user .userDesc, .conversation .conversationContent, .grow .growDesc, .user .userImg, .conversation .conversationImg, .grow .growImg {
+  width: 40%;
+  float: right;
+}
+
+.user, .grow {
+  background-color: #f5faff;
+  width: 100%;
+  margin-bottom: 160px;
+  position: relative;
+}
+
+.user .userImg, .conversation .conversationImg, .grow .growImg {
+  height: 300px;
+  width: 400px;
+  padding: 50px 0 100px 0;
+  margin-right: 150px;
+}
+
+footer .subscribe div span, .yourComunity span, header .headerContent span {
+  color: #FFF;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: #ff52bf;
+  box-shadow: 5px 5px 5px #ff8fd8;
+}
+footer .subscribe div span:hover, .yourComunity span:hover, header .headerContent span:hover {
+  opacity: 0.8;
+}
+
+.yourComunity h2, .user .userDesc h2, .conversation .conversationContent h2, .grow .growDesc h2, header .headerContent h2 {
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  color: #00252e;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 30px 0 120px 0;
+}
+header nav .logo {
+  float: right;
+}
+header nav .tryIt {
+  float: left;
+  color: #ff52bf;
+  border: 1px solid #ff52bf;
+  padding: 8px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+header nav .tryIt:hover {
+  color: #FFF;
+  background-color: #ff52bf;
+}
+header nav .fix {
+  clear: both;
+}
+header .headerContent {
+  padding-top: 170px;
+}
+header .headerContent p {
+  color: #00252e;
+  padding-bottom: 40px;
+}
+.screen {
+  margin-bottom: 90px;
+}
+.screen img {
+  width: 100%;
+}
+
+.msg {
+  padding-bottom: 200px;
+  width: 100%;
+}
+.msg .msgItem {
+  width: 50%;
+  float: right;
+}
+.msg .msgItem h2 {
+  font-size: 60px;
+  padding-bottom: 8px;
+}
+.msg .msgItem img {
+  display: block;
+  width: 5%;
+  margin-right: 170px;
+}
+.msg .msgItem span {
+  color: #a19e9e;
+}
+.msg .fix {
+  clear: both;
+}
+
+.grow .upperBound {
+  background-image: url("../images/bg-section-top-desktop-1.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: -150px;
+}
+.grow .upperBound img {
+  width: 100%;
+}
+.grow .lowerBound {
+  position: absolute;
+  top: 100%;
+  background-image: url("../images/bg-section-bottom-desktop-1.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+}
+.grow .lowerBound img {
+  width: 100%;
+}
+.grow .growDesc {
+  padding: 150px 0 100px 0;
+}
+.grow .growImg {
+  float: left;
+}
+.grow .growImg img {
+  width: 100%;
+  height: 100%;
+}
+.grow .fix {
+  clear: both;
+}
+
+.conversation {
+  margin-bottom: 200px;
+}
+.conversation .conversationImg {
+  margin-left: 150px;
+}
+.conversation .conversationImg img {
+  width: 100%;
+  height: 100%;
+}
+.conversation .conversationContent {
+  width: 30%;
+  padding: 150px 0 100px 0;
+}
+.conversation .fix {
+  clear: both;
+}
+
+.user .upperBound {
+  background-image: url("../images/bg-section-top-desktop-2.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: -130px;
+}
+.user .upperBound img {
+  width: 100%;
+}
+.user .lowerBound {
+  background-image: url("../images/bg-section-bottom-desktop-2.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: 100%;
+}
+.user .lowerBound img {
+  width: 100%;
+}
+.user .userDesc {
+  float: right;
+  padding: 150px 0 100px 0;
+}
+.user .userImg {
+  float: left;
+}
+.user .userImg img {
+  width: 100%;
+  height: 100%;
+}
+.user .fix {
+  clear: both;
+}
+
+.yourComunity {
+  padding: 100px 0 400px 0;
+  text-align: center;
+}
+.yourComunity h2 {
+  margin-bottom: 20px;
+}
+footer {
+  background-color: #00252e;
+  position: relative;
+  padding: 100px 0 50px;
+  color: #c0b8b8;
+}
+footer .upperbound {
+  position: absolute;
+  top: -155px;
+  background-image: url("../images/bg-footer-top-desktop.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  top: -157px;
+}
+footer .upperbound img {
+  width: 100%;
+}
+footer .huddle {
+  width: 40%;
+  float: right;
+}
+footer .huddle .logo {
+  filter: contrast(0%);
+}
+footer .huddle p {
+  padding: 20px 0;
+}
+footer .huddle .icon {
+  padding: 5px 0;
+  cursor: pointer;
+}
+footer .huddle ul {
+  padding: 40px 0;
+}
+footer .huddle ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 25px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+footer .subscribe {
+  width: 40%;
+  float: left;
+}
+footer .subscribe h3 {
+  font-size: 30px;
+}
+footer .subscribe p {
+  padding: 20px 0;
+}
+footer .subscribe div input {
+  padding: 10px;
+  height: 25px;
+  outline: none;
+  margin-left: 30px;
+  border-radius: 5px;
+  border: 0;
+}
+footer .subscribe div span {
+  box-shadow: 0px 0px 0px #ff8fd8;
+  height: 25px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+footer .fix {
+  clear: both;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .msg .msgItem {
+    width: 100%;
+    float: none;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grow .upperBound {
+    background-image: url("../images/bg-section-top-mobile-1.svg");
+    background-repeat: no-repeat;
+    height: 180px;
+    top: -180px;
+    width: 100%;
+    background-size: cover;
+  }
+  .grow .lowerBound {
+    background-image: url("../images/bg-section-bottom-mobile-1.svg");
+    background-repeat: no-repeat;
+    height: 180px;
+    top: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  .grow .growDesc {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .grow .growImg {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: auto;
+  }
+  .grow .growImg img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .conversation .conversationContent {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .conversation .conversationImg {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: auto;
+  }
+  .conversation .conversationImg img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .user .upperBound {
+    background-image: url("../images/bg-section-top-mobile-2.svg");
+    background-repeat: no-repeat;
+    height: 180px;
+    top: -180px;
+    width: 100%;
+    background-size: cover;
+  }
+  .user .lowerBound {
+    background-image: url("../images/bg-section-bottom-mobile-2.svg");
+    background-repeat: no-repeat;
+    height: 180px;
+    top: 100%;
+    width: 100%;
+    background-size: cover;
+  }
+  .user .userDesc {
+    width: 100%;
+    float: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .user .userImg {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: none;
+    text-align: center;
+    margin: auto;
+  }
+  .user .userImg img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .upperbound {
+    background-image: url("../images/bg-footer-top-mobile.svg");
+    background-repeat: no-repeat;
+    height: 180px;
+    top: -180px;
+    width: 100%;
+    background-size: cover;
+  }
+  footer .huddle {
+    width: 100%;
+    float: none;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+  }
+  footer .subscribe {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    float: none;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 140px;
+    position: relative;
+  }
+  footer .subscribe input {
+    width: 80%;
+    margin: auto;
+    display: block;
+    height: 30px;
+  }
+  footer .subscribe span {
+    position: absolute;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    margin-top: 20px;
+    width: 30%;
+    text-align: center;
+    right: 7%;
+  }
+}/*# sourceMappingURL=mainrtl.css.map */

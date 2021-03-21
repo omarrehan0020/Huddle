@@ -1,0 +1,519 @@
+$pink: hsl(322, 100%, 66%) ;
+$lightPink: hsl(321, 100%, 78%);
+$darkCyan: hsl(192, 100%, 9%);
+$paleBlue:hsl(207, 100%, 98%);
+
+$floatLeft: left ;
+$floatRight: right ;
+
+
+@mixin box-shadow($top, $left, $blur, $color) {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+}
+@mixin ub($url) {
+    background-image: url($url);
+    background-repeat: no-repeat;
+}
+@mixin minMedia {
+    @media  (max-width: 500px) {
+      @content;
+    }
+  }
+
+
+
+%middle{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+%floatItem{
+    width: 40%;
+    float: $floatLeft;
+}
+%curvedSec{
+    background-color: $paleBlue;
+    width: 100%;
+    margin-bottom: 160px;
+    position: relative;
+}
+%curvedImg{
+    @extend %floatItem ;
+    height: 300px;
+    width: 400px;
+    padding: 50px 0 100px 0;
+    margin-#{$floatLeft}: 150px;
+}
+
+%pinkbutton{
+    color: #FFF;
+    padding: 15px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: $pink;
+    &:hover{  
+        opacity: .8;              
+    }
+    @include box-shadow(5px,5px ,5px ,$lightPink )
+}
+
+%heading{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+
+body{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: $darkCyan;
+}
+h1,h2,h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    margin: 30px 0 120px 0;
+    nav{
+        .logo{
+            float: $floatLeft;
+        }
+        .tryIt{
+            float: $floatRight;
+            color: $pink;
+            border: 1px solid $pink;
+            padding: 8px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            &:hover{
+                color: #FFF;
+                background-color: $pink;
+                
+            }
+        }
+        .fix{
+            clear: both;
+        }
+    }
+    .headerContent{
+        @extend %middle ;
+        padding-top: 170px;
+        h2{
+           @extend %heading;
+        }
+        p{
+            color: $darkCyan;
+            padding-bottom: 40px;
+        }
+        span{
+           @extend %pinkbutton ;
+        }
+    }
+}
+.screen{
+    @extend %middle ;
+    img{
+        width: 100%;
+    }
+    margin-bottom: 90px;
+}
+
+.msg{
+    @extend %middle ;
+    padding-bottom: 200px;
+    width: 100%;
+    .msgItem{
+        width: 50%;
+        float: $floatLeft;
+        h2{
+            font-size: 60px;
+            padding-bottom: 8px;
+        }
+        img{
+            display: block;
+            width: 5%;
+            margin-#{$floatLeft}: 170px;
+        }
+        span{
+            color: rgb(161, 158, 158);
+        }
+    }
+   
+    .fix{
+        clear: both;
+    }
+}
+
+.grow{
+    @extend %curvedSec ;
+    .upperBound{
+        @include ub("../images/bg-section-top-desktop-1.svg");
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: -150px;
+        img{
+            width: 100%;
+        }
+    }
+    .lowerBound{
+        position: absolute;
+        top: 100%;
+        @include ub("../images/bg-section-bottom-desktop-1.svg");
+        width: 100%;
+        height: 200px;
+        img{
+            width: 100%;
+        }
+    }
+    .growDesc{
+        @extend  %floatItem ;
+        padding: 150px 0 100px 0;
+        h2{
+            @extend %heading ;
+        }
+    }
+    .growImg{
+        @extend %curvedImg;
+        float: $floatRight;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .fix{
+        clear: both;
+    }
+}
+
+.conversation{
+    margin-bottom: 200px;
+    .conversationImg{
+        @extend %curvedImg;
+        margin-#{$floatRight}: 150px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .conversationContent{
+        @extend  %floatItem ;
+        width: 30%;
+        padding: 150px 0 100px 0;
+        h2{
+            @extend %heading ;
+        }
+    }
+    .fix{
+        clear: both;
+    }
+}
+
+
+.user{
+    @extend %curvedSec ;
+    .upperBound{
+        @include ub("../images/bg-section-top-desktop-2.svg");
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: -130px;
+        img{
+            width: 100%;
+        }
+    }
+    .lowerBound{
+        @include ub("../images/bg-section-bottom-desktop-2.svg");
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .userDesc{
+        @extend  %floatItem ;
+        float: $floatLeft;
+        padding: 150px 0 100px 0;
+        h2{
+            @extend %heading ;
+        }
+    }
+    .userImg{
+        @extend %curvedImg;
+        float: $floatRight;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .fix{
+        clear: both;
+    }
+}
+
+.yourComunity{
+    padding: 100px 0 400px 0;
+    text-align: center;
+    h2{
+    @extend %heading ;
+    margin-bottom: 20px
+    }
+    span {
+        @extend %pinkbutton;
+    }
+}
+
+footer{
+    background-color: $darkCyan;
+    position: relative;
+    padding: 100px 0 50px;
+    color: rgb(192, 184, 184);
+    .upperbound{
+        position: absolute;
+        top: -155px;
+        @include ub("../images/bg-footer-top-desktop.svg");
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        top: -157px;
+        img{
+            width: 100%;
+        }
+        
+    }
+    .huddle{
+        width: 40%;
+        float: $floatLeft;
+        
+        .logo{
+            filter: contrast(0%);
+        }
+        p{
+            padding: 20px 0
+        }
+        .icon{
+            padding: 5px 0 ;
+            cursor: pointer;
+        }
+        ul {
+            padding: 40px 0;
+           li{
+            list-style: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 0 5px;
+            cursor: pointer;
+           }
+        }
+    }
+    .subscribe{
+        width: 40%;
+        float: $floatRight;
+        h3{
+            font-size: 30px;
+        }
+        p{
+            padding: 20px 0;
+        }
+        div{
+            input{
+                padding: 10px ;
+                height: 25px;
+                outline: none;
+                margin-#{$floatRight}: 30px;
+                border-radius: 5px;
+                border: 0
+                
+                        }
+            span{
+                @extend %pinkbutton ;
+                @include box-shadow(0px,0px ,0px ,$lightPink );
+                height: 25px;
+                border-radius: 5px;
+                padding: 10px 20px;
+            }
+        }
+    }
+    .fix{
+        clear: both;
+    }
+}
+
+
+//responsive media query
+.container{
+    @include minMedia{
+        width: 90%;
+    }
+}
+
+.msg{
+    .msgItem{
+        @include minMedia{
+            width: 100%;
+            float: none;
+            margin-bottom: 60px;
+        }
+    }
+}
+
+.grow{
+   @include minMedia(){
+    .upperBound{
+        @include ub("../images/bg-section-top-mobile-1.svg");
+        height: 180px;
+        top: -180px;
+         width: 100%;
+        background-size: cover
+    }
+    .lowerBound{
+        @include ub("../images/bg-section-bottom-mobile-1.svg");
+        height: 180px;
+        top: 100%;
+        width: 100%;
+        background-size: cover;
+
+    }
+    .growDesc{
+        width: 100%;
+        float: none;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    .growImg{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin: auto;
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    }
+   }
+}
+
+.conversation{
+    @include minMedia(){
+     .conversationContent{
+         width: 100%;
+         float: none;
+         text-align: center;
+         padding: 0;
+         margin: 0;
+     }
+     .conversationImg{
+         padding: 0;
+         margin: 0;
+         width: 100%;
+         float: none;
+         text-align: center;
+         margin: auto;
+         img{
+             width: 300px;
+             height: 200px;
+         }
+     }
+    }
+ }
+ 
+.user{
+    @include minMedia(){
+     .upperBound{
+         @include ub("../images/bg-section-top-mobile-2.svg");
+         height: 180px;
+         top: -180px;
+          width: 100%;
+         background-size: cover
+     }
+     .lowerBound{
+         @include ub("../images/bg-section-bottom-mobile-2.svg");
+         height: 180px;
+         top: 100%;
+         width: 100%;
+         background-size: cover;
+ 
+     }
+     .userDesc{
+         width: 100%;
+         float: none;
+         text-align: center;
+         padding: 0;
+         margin: 0;
+     }
+     .userImg{
+         padding: 0;
+         margin: 0;
+         width: 100%;
+         float: none;
+         text-align: center;
+         margin: auto;
+         img{
+             width: 300px;
+             height: 200px;
+         }
+     }
+    }
+ }
+
+ footer{
+    @include minMedia(){
+     .upperbound{
+         @include ub("../images/bg-footer-top-mobile.svg");
+         height: 180px;
+         top: -180px;
+          width: 100%;
+         background-size: cover
+     }
+     .huddle{
+         width: 100%;
+         float: none;
+         text-align: $floatLeft;
+         padding: 0;
+         margin: 0;
+     }
+     .subscribe{
+         padding: 0;
+         margin: 0;
+         width: 100%;
+         float: none;
+         text-align: left;
+         margin: auto;
+         margin-bottom: 140px;
+         position: relative;
+         input{
+             width: 80%;
+             margin: auto;
+             display: block;
+             height: 30px;
+         }
+         span{
+             position: absolute;
+             display: block;
+             height: 30px;
+             line-height: 30px;
+             font-size: 25px;
+             margin-top: 20px;
+             width: 30%;
+             text-align: center;
+             right: 7%;
+             
+         }
+     }
+    }
+ }
